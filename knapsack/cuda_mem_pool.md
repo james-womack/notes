@@ -9,7 +9,7 @@
         ```c++
         std::shared_ptr<gpu_mem_pool> merge(std::shared_ptr<gpu_mem_pool>& a, std::shared_ptr<gpu_mem_pool>& b);
         ```
-       
+
     - Make a function that splits a memory pool into two when a threshold is hit:
 
         ```c++
@@ -17,7 +17,7 @@
         ```
 
 - Create a struct of which represents a view into the memory pool for a certain node, this will be useful for the host for conciseness of the algorithm and can be used on the GPU side if desired.
-      - Create a simple struct that represents a possible solution:
+    - Create a simple struct that represents a possible solution:
 
         ```c++
         struct bfs_solution_view {
@@ -31,7 +31,7 @@
         };
         ```
 
-      - Create a function that gets a view into the memory pool, made for iterating over the memory pool:
+    - Create a function that gets a view into the memory pool, made for iterating over the memory pool:
 
         ```c++
         void gpu_mem_pool::get_node(const int& pId, bfs_solution_view& view);
